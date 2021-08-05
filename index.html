@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Display a map with a custom style</title>
+		<title>IPO company density map 2019- July2021</title>
 		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 		<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
 		<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
@@ -24,12 +24,12 @@
 		        padding: 10px;
 		        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 		        line-height: 18px;
-		        height: 150px;
+		        height: 180px;
 		        margin-bottom: 40px;
-		        width: 100px;
+		        width: 120px;
 		    }
 
-		    #legend h3{
+		    #legend h4{
 		    	margin-top: 0;
 		    }
 
@@ -45,21 +45,21 @@
 	<body>
 		<h2>visualization with mapbox</h2>
 		<div id="map"></div>
-		<div class='map-overlay' id='legend'><h3>Pedestrian deaths</h3></div>
+		<div class='map-overlay' id='legend'><h4>Number of company IPO since 2019</h4></div>
 			<script>
 				mapboxgl.accessToken = 'pk.eyJ1IjoiaGlyb21pc2EiLCJhIjoiY2tydm02dnBmMDgwZTJ3azNlY3d4Y2VxNCJ9.ftXZ6UctZEo8Y-W0K4KWQQ';
 
 				var map = new mapboxgl.Map({
 					container: 'map', // container ID
-					style: 'mapbox://styles/hiromisa/ckrutfrka4pwl17mruo3zq3yp', // custom style url from https://studio.mapbox.com/
-					center: [-98.51857434935005, 29.462007626543087, ], // starting position
-					zoom: 11 // starting zoom
+					style: 'mapbox://styles/hiromisa/ckryehga40acq17lysdg61m79', // custom style url from https://studio.mapbox.com/
+					center: [-98.370937, 34.425760 ], // starting position
+					zoom: 3.3 // starting zoom
 				});
 
 				map.on('load', function() {
 					//create legend
-					var bins = ['1', '2', '3', '4'];
-					var colors = ['#fdbea5', '#fc7050', '#d42020', '#67000d'];
+					var bins = ['1+', '10+', '30+', '50+','70+','100+'];
+					var colors = ['#feebe2', '#fa9fb5', '#f768a1', '#c51b8a','#ae017e','#7a0177'];
 
 					for (i = 0; i < bins.length; i++) {
 						console.log(bins[i]);
