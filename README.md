@@ -1,7 +1,6 @@
 # Project: IPO density map 
 
-This is a project for Lede week 9.  
-Using an IPO company list I obtained, analyzed IPO density based on geographics, visualized with mapbox.
+This is a project for Lede week 9. Using an IPO company list I obtained, analyzed density based on geographics, visualized with mapbox.
 ---
 ## Background
 In late 2020, tech nerds have argued whether the "San Francisco exodus" is real or not.  Some people who moved to places like Texas said, "We live in  Zoom era, location doesn't matter.", but others did not agree to this idea.
